@@ -1,9 +1,114 @@
-//colors
+//Bootstrap library
+@import "bootstrap";
+
+//COLORS
+/////////////////////////////////////////////////////////////////////
 @artB-gold:  #FFD700;
 @artB-black: #000000;
 
+
+/////////////////////////////////////////////////////////////////////
+
+//SIZES
+/////////////////////////////////////////////////////////////////////
+
+//body
+@normal-font-size: 12px;
+
+//central-page
+
+//top-stripe
+@top-stripe-normal-height: 200px;
+
+//top-menu
+@top-menu-height: 50px;
+@top-menu-font-size: 15px;
+
+// Media query variables.
+@max-phone:   ~"screen and (max-width: @{screen-xs-min})";
+@max-tablet:  ~"screen and (max-width: @{screen-sm-min})";
+@max-normal:  ~"screen and (max-width: @{screen-md-min})";
+@max-wide:    ~"screen and (max-width: @{screen-lg-min})";
+@min-phone:   ~"screen and (min-width: @{screen-xs-min})";
+@min-tablet:  ~"screen and (min-width: @{screen-sm-min})";
+@min-normal:  ~"screen and (min-width: @{screen-md-min})";
+@min-wide:    ~"screen and (min-width: @{screen-lg-min})";
+
+/////////////////////////////////////////////////////////////////////
+
+html{
+    -ms-overflow-style: scrollbar;   
+    overflow-y: scroll;
+    -ms-touch-action: pan-y;
+    width: 100%;
+    -ms-scroll-chaining: chained;
+    -ms-content-zooming: none;
+}
+
 body{
+	width: 100%;
 	background-color: @artB-black;
 	color: @artB-gold;
+	font-size: @normal-font-size;
 }
+
+//COMMON
+/////////////////////////////////////////////////////////////////////
+
+#logo-link{
+	width: 75%;
+}
+
+.central-page{
+	margin: 0 auto;
+}
+
+.artB-top-stripe{
+	width: 100%;
+	background: url("../content/logo/artB-logo.png");
+	background-size: auto 75%;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: 10px;	
+}
+
+.artB-navbar{
+	margin-bottom: 30px;
+	width: 100%;
+	height: @top-menu-height;
+	font-size: 
+}
+
+.artB-navbar-item{
+	text-align: center;
+}
+
+.artB-navbar-item > a{
+	color: @artB-gold;
+}
+
+/////////////////////////////////////////////////////////////////////
+
+//NORMAL AND BIG SCREENS
+/////////////////////////////////////////////////////////////////////
+
+@media @min-normal{
+
+	.central-page{
+		height: 100%;
+		width: 75%;
+	}
+
+	.artB-top-stripe{
+		height: @top-stripe-normal-height;
+	}
+
+	#logo-link{
+		height: @top-stripe-normal-height;
+	}
+
+}
+
+/////////////////////////////////////////////////////////////////////
+
 
